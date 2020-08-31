@@ -12,6 +12,7 @@ export default class Routes extends Component {
   render() {
     return (
       <Router>
+        {/* 스위치는 한번에 한 경로만 보여준다 */}
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/stateprops" component={StateProps} />
@@ -20,6 +21,9 @@ export default class Routes extends Component {
           <Route exact path="/active-tab" component={ActiveTab} />
           <Route exact path="/lifting-state-up" component={LiftingStateUp} />
           <Route exact path="/url-parameters" component={UrlParameters} />
+          {/* id는 객체의 키값 */}
+          {/* path="/url-parameters/:hello" hello에 값이 들어온다  */}
+          <Route exact path="/url-parameters/:id" component={UrlParameters} />
         </Switch>
       </Router>
     );
